@@ -109,7 +109,7 @@ if (!exit.exited) {
  * Copy config files from config directory.
  */
 
-function copyConfig (from, to) {
+ function copyConfig (from, to) {
   from = path.join(__dirname, '..', 'assets/config', from)
   write(to, fs.readFileSync(from, 'utf-8'))
 }
@@ -344,8 +344,15 @@ done()
     if (empty || program.force) {
       createApplication(appName, destinationPath)
     } else {
-      console.log('####################\n##                ##\n##     Camper     ##\n##     v' + version + '     ##\n##                ##\n####################')
-      program.outputHelp()
+      confirm('destination is not empty, continue? [y/N] ', function (ok) {
+        if (ok) {
+          process.stdin.destroy()
+          createApplication(appName, destinationPath)
+        } else {
+          console.error('aborting')
+          exit(1)
+        }
+      })
     }
   })
 }
