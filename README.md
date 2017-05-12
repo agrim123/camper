@@ -37,7 +37,7 @@ $ camper myapp
    create : myapp/src/server/app.js
    create : myapp/src/server/index.js
    create : myapp/src/shared
-   create : myapp/src/shared/config
+   create : myapp/src/shared/config.js
    create : myapp/src/shared/util.js
    create : myapp/src/client/action
    create : myapp/src/client/action/hello.js

@@ -232,7 +232,7 @@ if (!exit.exited) {
       mkdir(path + '/src/shared', function () {
         var config = loadTemplate('src/shared/config.js')
         config.locals.name = name
-        write(path + '/src/shared/config', config.render())
+        write(path + '/src/shared/config.js', config.render())
         copyTemplate('src/shared/util.js', path + '/src/shared/util.js')
         complete()
       })
