@@ -47,7 +47,6 @@ program
 .version(version, '    --version')
 .usage('[options] [dir]')
 .option('-f, --force', 'force on non-empty directory')
-.option('    --git', 'add .gitignore')
 .parse(process.argv)
 
 if (!exit.exited) {
@@ -239,9 +238,7 @@ function copyConfig (from, to) {
       })
     })
 
-    if (program.git) {
-      copyConfig('/gitignore', path + '/.gitignore')
-    }
+    copyConfig('/gitignore', path + '/.gitignore')
     copyConfig('/babelrc', path + '/.babelrc')
     copyConfig('/editorconfig', path + '/.editorconfig')
     copyConfig('/eslintrc.json', path + '/.eslintrc.json')

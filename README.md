@@ -113,7 +113,6 @@ This generator can also be further configured with the following command line fl
     -h, --help     output usage information
         --version  output the version number
     -f, --force    force on non-empty directory
-        --git      add .gitignore
 
 ```
 
