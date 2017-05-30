@@ -121,7 +121,7 @@ if (!exit.exited) {
  */
 
  function createApplication (name, path) {
-  var wait = 5
+  var wait = 9
 
   console.log()
   function complete () {
@@ -215,12 +215,24 @@ if (!exit.exited) {
       mkdir(path + '/src/client', function () {
         copyTemplate('src/client/app.jsx', path + '/src/client/app.jsx')
         copyTemplate('src/client/index.jsx', path + '/src/client/index.jsx')
-        mkdir(path + '/src/client/action', function () {
-          copyTemplate('src/client/action/hello.js', path + '/src/client/action/hello.js')
+        mkdir(path + '/src/client/actions', function () {
+          copyTemplate('src/client/action/hello.js', path + '/src/client/actions/hello.js')
           complete()
         })
-        mkdir(path + '/src/client/reducer', function () {
-          copyTemplate('src/client/reducer/hello.js', path + '/src/client/reducer/hello.js')
+        mkdir(path + '/src/client/components', function () {
+          complete()
+        })
+        mkdir(path + '/src/client/containers', function () {
+          complete()
+        })
+        mkdir(path + '/src/client/routes', function () {
+          complete()
+        })
+        mkdir(path + '/src/client/__tests__', function () {
+          complete()
+        })
+        mkdir(path + '/src/client/reducers', function () {
+          copyTemplate('src/client/reducer/hello.js', path + '/src/client/reducers/hello.js')
           complete()
         })
       })
