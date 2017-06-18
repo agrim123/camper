@@ -1,10 +1,5 @@
 // @flow
 
-/**
- * author: akshay
- * since: 2/5/17
- */
-
 import 'babel-polyfill'
 
 import React from 'react'

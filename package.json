@@ -1,6 +1,6 @@
 {
   "name": "camperjs",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Starter Kit for React Apps",
   "main": "bin/camper",
   "preferGlobal": true,
