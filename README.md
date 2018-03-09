@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/agrim123/camperjs.svg?branch=master)](https://travis-ci.org/agrim123/camperjs)
 
+## Introduction
+
+Generates a well organized directory structure for react applications.
+
 ## Installation
 
 Add npm registry
